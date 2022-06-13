@@ -1,0 +1,127 @@
+
+
+.postWrapper{
+    display: flex;
+    margin-left: 18%;
+    max-width: 600px;
+}
+
+.blogmargin {
+    margin-top: "10%";
+}
+@media only screen and (min-width: 800px) {
+.collated {
+margin-left: 32%;
+}}
+
+.postInner{
+      flex-basis: 120%;
+      margin: 20px 20px 20px 0;
+}
+
+.postDescription{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+}    
+  
+.back{
+          margin: 20px 0 20px 50px;
+          background: none;
+          border: 1px solid #7451f8;
+          padding: 0 10px 0 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 18px;
+          transition: 0.2s;
+          color: #7451f8;
+}
+.postDescription:hover{
+    background-color: rgba(10, 132, 255, 0.3);
+    cursor: pointer;
+}
+  
+.backIcon{
+    font-size: 30px;
+}  
+.avatar{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    object-fit: cover;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-left: -1.5%;
+}
+  
+.postInfo{
+ margin-left: 5%;
+}
+  
+.author{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+  
+.authorDetails{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.name{
+    font-size: 14px;
+    font-weight: 600;
+    text-indent: -18%;
+}
+  
+.date{
+     font-size: 13px;
+    color: #7c7b7b;
+    text-indent: -18%;
+}
+  
+h1{
+    word-break: break-word;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+  
+.postText{
+    padding: 0 50px 20px 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 170px;
+}
+
+.extendedcontent {
+    height: 300px;
+}
+
+li{
+    margin-left: 15px;
+}
+ 
+.banner {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+}
+
+.blogtitle {
+    margin-top: -2%;
+}
+
+.readmore {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 87%;
+    margin-bottom: 1%;
+}

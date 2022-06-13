@@ -1,0 +1,44 @@
+@import url(../assets.css);
+
+.creditscontainer {
+    position: relative;
+    float: left;
+    height: 98vh;
+    width: 82vw;
+    border-radius: 30px;
+    background-color: #f2f5f6;
+    margin-left: 12%;
+    margin-top: 3%;
+    max-width:1300px;
+    overflow-y: auto;
+    font-family: 'samsung';
+}
+
+.creditsgrid {
+    margin-top: 1%;
+}
+
+.creditstitle {
+    font-size: clamp(20px, 40px, 3vw);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.sectionheader {
+    font-size: clamp(17px, 25px, 2vw);
+    font-weight: bold;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.stackgrid {
+    margin-left: 4%;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+.stacktitle {
+    margin-top: 2%;
+    margin-left: 0%;
+}

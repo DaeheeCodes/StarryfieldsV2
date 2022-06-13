@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.956c8192.css",
+    "main.js": "/static/js/main.caf3d15b.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/universe.ttf": "/static/media/universe.a3b22d16b1cca8526908.ttf",
+    "static/media/background.jpg": "/static/media/background.39f2a155db47aa7d858d.jpg",
+    "static/media/portbackground.jpg": "/static/media/portbackground.39f2a155db47aa7d858d.jpg",
+    "static/media/YdestreetB.ttf": "/static/media/YdestreetB.7cd4dbaca5e9a6c014a6.ttf",
+    "static/media/YdestreetL.ttf": "/static/media/YdestreetL.27ce8e0e1628b57c4c72.ttf",
+    "static/media/starfont.ttf": "/static/media/starfont.256b621b0992de36f63f.ttf",
+    "static/media/samsung.otf": "/static/media/samsung.82ecdac14766aeb701b4.otf",
+    "static/media/repet.ttf": "/static/media/repet.8fca36f348caef859417.ttf",
+    "static/media/garyfong.jpeg": "/static/media/garyfong.be29af31bc0d2f38ea17.jpeg",
+    "static/media/texasflag.jpeg": "/static/media/texasflag.78c38aa589bed7b43e4a.jpeg",
+    "static/media/koreanflag.jpeg": "/static/media/koreanflag.1fe34a97f250de01e7a2.jpeg",
+    "static/media/paulan.jpeg": "/static/media/paulan.6e590f984f5afc42f8d5.jpeg",
+    "index.html": "/index.html",
+    "main.956c8192.css.map": "/static/css/main.956c8192.css.map",
+    "main.caf3d15b.js.map": "/static/js/main.caf3d15b.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.956c8192.css",
+    "static/js/main.caf3d15b.js"
+  ]
+}

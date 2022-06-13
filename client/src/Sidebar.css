@@ -1,0 +1,82 @@
+@font-face {
+    font-family: samsung;
+    src: url(./fonts/samsung.otf);
+}
+
+.link {
+  color: black;
+}
+
+.status {
+    color: yellowgreen;
+}
+
+.navbar {
+  margin-top: 0px;
+}
+
+.sidebar{
+  left: 0;
+  top: 0;
+  justify-content:flex-end;
+    font-family: samsung;
+    width: 50%;
+    box-shadow: 0 0 0.7px white;
+    color: black;
+    background-color: white;
+    z-index: 1600;
+    height: 4%;
+    color:rgba(26, 180, 194, 0.5);
+  border-bottom: 1px solid;
+    
+}
+
+
+  .icon{
+    margin-left: -10vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align:center;
+
+  }
+
+  .icon:hover{
+    color: rgba(26, 180, 194, 0.5);
+    transition: color 100ms ease-out;
+  }
+
+  /*
+
+  @media only screen and (max-width: 500px) {
+    .sidebar {
+      width: 7%;
+      box-shadow: 0 0 0.7px white;
+    }
+
+    .link {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    .sidebar {
+      width: 7%;
+      box-shadow: 0 0 0.7px white;
+    }
+
+    .extended .icon {
+       visibility: hidden;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    .icon {
+      display: none;
+    }
+  }
+
+*/

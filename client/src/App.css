@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: top;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+ display: grid;
+ 
+}

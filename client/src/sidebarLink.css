@@ -1,0 +1,29 @@
+
+
+.link{
+    justify-content: space-evenly;
+    align-items: flex-end;
+    cursor: pointer;
+    text-align: center;
+  }
+  .link:hover{
+    color: rgba(26, 180, 194, 0.5);
+    transition: color 100ms ease-out;
+  }
+  .link > h2{
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 3%;
+  }
+
+  @media only screen and (max-width: 420px) {
+    .linktext {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 420px) {
+    .icon {
+      display: block;
+    }
+  }

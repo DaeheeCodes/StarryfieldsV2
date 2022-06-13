@@ -1,0 +1,49 @@
+@font-face {
+    font-family: star;
+    src: url(starfont.ttf);
+}
+@font-face {
+    font-family: street;
+    src: url(../fonts/YdestreetB.ttf);
+}   
+
+
+
+.gridbox {
+    color: black;
+    font-family: 'street';
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 98vh;
+    position: relative;
+}
+
+.project {
+    font-size: 20px;
+    text-indent: 12%;
+    font-family: 'star';
+    color: black;
+}
+
+
+
+.vidtitle {
+    font-size: 12px;
+    color: black;
+    text-indent: 8%;
+    font-family: 'streetBold';
+};
+
+.projects {
+    font-size: 35px;
+    font-family: 'streetBold';
+    color: black;
+    margin-left: -5%;
+}
+
+.currentproject {
+    font-size: 20px;
+    text-indent: 10%;
+    font-family: 'star';
+    color: black;
+}
