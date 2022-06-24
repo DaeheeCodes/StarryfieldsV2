@@ -5,9 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import '../assets.css'
 import iphone  from '../photos/taliphone.png';
 import pixel from '../photos/pixel.jpg';
+import {useRef} from "react";
+
 /*regular css expressions do not inherit to mui components,  
 added spearate style component for better readability than inline sx styling
 */
+
 
 const container ={
     ml: "5%",
@@ -15,10 +18,6 @@ const container ={
     fontFamily: "samsung",
 
 }
-
-
-
-
 
 const textbody = {
     mt: '5%',
@@ -31,16 +30,31 @@ const titles = {
     ml: '-4%',
     mt: "3%",
     color: 'gray',
-    fontSize: '24px',
+    fontSize: '15px',
     borderBottom: '1px solid',
+}
 
+const titlesone = {
+    ml: '-4%',
+    mt: "25%",
+    color: 'gray',
+    fontSize: '15px',
+    borderBottom: '1px solid',
 }
 
 const titlestwo = {
     ml: '-4%',
     mt: "12%",
     color: 'gray',
-    fontSize: '24px',
+    fontSize: '15px',
+    borderBottom: '1px solid',
+}
+
+const titlestworef = {
+    ml: '-4%',
+    mt: "4%",
+    color: 'gray',
+    fontSize: '15px',
     borderBottom: '1px solid',
 }
 
@@ -48,6 +62,13 @@ const projects = {
     mt: "2%",
     color: 'black',
     fontSize: '45px',
+}
+
+const projectsref = {
+    mt: "2%",
+    color: 'black',
+    fontSize: '45px',
+    cursor: 'pointer',
 }
 
 const projectstwo = {
@@ -80,10 +101,26 @@ const marketing = {
     lineHeight: '2',
 }
 
+const reflink = {
+    "&:hover": {
+        color: "rgba(0, 0, 0, 0.5)",
+        transition: 'color 100ms ease-out'
+      }
+}
+
 
 
 function Home () {
 
+
+    const TaskRef = useRef(null);
+    const TaskScroll = () => TaskRef.current.scrollIntoView();
+    const  SudoRef = useRef(null);
+    const SudoScroll = () => SudoRef.current.scrollIntoView();
+    const PxRef = useRef(null);
+    const PxScroll = () => PxRef.current.scrollIntoView();
+    const  WindRef = useRef(null);
+    const WindScroll = () => WindRef.current.scrollIntoView();
 /* alternative clever soluition saved for reference
     let text = ["We are a team of friends with a shared dream of being the best in Software Engineering and Graphic Design.",
         <br/>,"Follow our journey here and see what we have brewing!"];
@@ -95,19 +132,69 @@ function Home () {
         <Grid item xs={8}>
             <p></p>
         </Grid>
-        <Grid item xs={24} sx={{...textbody}}>
+        <Grid item xs={30} sx={{...textbody}}>
             <p>
             We are a team of friends with a shared dream of being the best in Software Engineering and Graphic Design. Follow our journey here and see what we have brewing!
             </p>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={40} sx={{...titles}}>
+            <p>
+                Personal Projects: Daehee Hwang
+            </p>
+        </Grid>
+        <Grid item xs={5}>
+            <p></p>
+        </Grid>
+        <Grid item xs={35} sx={{...projectsref, ...reflink}} onClick={TaskScroll}>
+            <p>Task-a-Lyzer<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>Task-a-Lyzer</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>Task-a-Lyzer</span></p>
+        </Grid>
+        <Grid item xs={0} sx={{...projectsref}}>
+            <p>
+            </p>
+        </Grid>
+        <Grid item xs={12}>
+            <p></p>
+        </Grid>
+        <Grid item xs={28} sx={{...projectsref, ...reflink}} onClick={SudoScroll}>
+            <p>SudoCube<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>SudoCube</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>SudoCube</span></p>
+        </Grid>
+        <Grid item xs={0} sx={{...projectsref}}>
+            <p>
+            </p>
+        </Grid>
+        <Grid item xs={19}>
+            <p></p>
+        </Grid>
+        <Grid item xs={21} sx={{...projectsref, ...reflink}} onClick={PxScroll}>
+            <p>PxILoveYou<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>PxILoveYou</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>PxILoveYou</span></p>
+        </Grid>
+        <Grid item xs={0} sx={{...projectsref}}>
+            <p>
+            </p>
+        </Grid>
+        <Grid item xs={40} sx={{...titlestworef}}>
+            <p>
+                Team Project: Paul An and Gary Fong
+            </p>
+        </Grid>
+        <Grid item xs={5}>
+            <p></p>
+        </Grid>
+        <Grid item xs={35} sx={{...projectsref, ...reflink}} onClick={WindScroll}>
+            <p>WindWalker<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>WindWalker</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>WindWalker</span></p>
+        </Grid>
+        <Grid item xs={0} sx={{...projectsref}}>
+            <p>
+            </p>
+        </Grid>
+        <Grid item xs={2}>
             <p></p>
         </Grid>
         <Grid item xs={0}>
             <p></p>
         </Grid>
-        <Grid item xs={40} sx={{...titles}}>
-            <p>
+        <Grid item xs={40} sx={{...titlesone}}>
+            <p ref={TaskRef}>
                 Personal Projects: Daehee Hwang
             </p>
         </Grid>
@@ -148,7 +235,45 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p></p>
         </Grid>
         <Grid item xs={40} sx={{...marketing}}>
-            <p>View Full Documentation</p>
+            <p ref={SudoRef}>View Full Documentation</p>
+            <p>Download on the Appstore</p>
+        </Grid>
+        <Grid item xs={28} sx={{...projects}} >
+            <p>
+                SudoCube
+            </p>
+        </Grid>
+        <Grid item xs={12}>
+        <CardMedia component="img" src = {iphone} style={{ width: 300, height: 600, position: 'absolute', marginTop: '25px'}}/>
+        </Grid>
+        <Grid item xs={0}>
+            <p></p>
+        </Grid>
+        <Grid item xs={0}>
+            <p></p>
+        </Grid>
+        <Grid item xs={25} sx={{...projectdesc}}>
+            <p>
+                Exciting new challenge for any puzzle lovers!
+            </p>
+        </Grid>
+        <Grid item xs={15}>
+            <p></p>
+        </Grid>
+        <Grid item xs={0}>
+            <p></p>
+        </Grid>
+        <Grid item xs={25} sx={{...projectdet}}>
+            <p>
+                Challenge yourself with the most unique and brain teazing Sudoku yet! 
+                <br></br> A fun collaboration of two classic puzzle. Twist and scroll your way into getting each face of the cube with a unique set of numbers.
+           </p>
+        </Grid>
+        <Grid item xs={15}>
+            <p></p>
+        </Grid>
+        <Grid item xs={40} sx={{...marketing}}>
+            <p ref={PxRef}>View Full Documentation</p>
             <p>Download on the Appstore</p>
         </Grid>
         <Grid item xs={28} sx={{...projectstwo}}>
@@ -195,7 +320,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p></p>
         </Grid>
         <Grid item xs={40} sx={{...titlestwo}}>
-            <p>
+            <p ref={WindRef}>
                 Team Project: Paul An and Gary Fong
             </p>
         </Grid>
