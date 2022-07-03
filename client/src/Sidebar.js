@@ -42,10 +42,11 @@ justify-content:flex-end;
 .title {
   margin-right: auto;
   position: relative;
-    padding-left: 0px;
+    padding-left: 5px;
     font-size: 30px;
     margin-top: 3%;
     text-decoration: 'none'
+    
 }
 
 .slogan {
@@ -71,20 +72,20 @@ function Sidebar(){
             <NavLink to="/home" style={{ textDecoration: 'none' , color: 'black', marginRight: 'auto'}} activeClassName="current" exact >
             <h2 className="title">StarryFields <small style= {{ color: "rgba(10, 132, 255, 0.9)", fontSize: "18px" }}> Life Out of Dreams</small></h2>
                 </NavLink>
-                <NavLink to="/home" style={{ textDecoration: 'none' , color: 'white'}} activeClassName="current" exact >
-                    <SidebarLink className="link" text="Home" /> <HomeIcon className ="icon"  />
+                <NavLink to="/home" style={{ textDecoration: 'none' , color: 'white', marginRight: '-15px'}} activeClassName="current" exact >
+                    <SidebarLink className="link" text="Home" />
                 </NavLink>
-                <NavLink to="/devNotes" style={{ textDecoration: 'none' , color: 'white'}} activeClassName="current" exact>
+                {/*<NavLink to="/devNotes" style={{ textDecoration: 'none' , color: 'white'}} activeClassName="current" exact>
                     <SidebarLink className="link" text="Dev Notes" /> <LibraryBooksIcon className ="icon" />
-                </NavLink>
+  </NavLink>*/}
                 <NavLink to="/about" style={{ textDecoration: 'none' , color: 'white'}} activeClassName="current" exact>
-                    <SidebarLink className="link" text="Our Team"/> <GroupIcon className ="icon" />
+                    <SidebarLink className="link" text="About Us"/>
                 </NavLink>
                 <NavLink to="/contactUs" style={{ textDecoration: 'none' , color: 'white'}} activeClassName="current" exact>
-                    <SidebarLink className="link" text="Contact Us" /> <DraftsIcon className ="icon" />
+                    <SidebarLink className="link" text="Contact Us" />
                 </NavLink>
                 <NavLink to="/credits" style={{ textDecoration: 'none' , color: 'white'}} activeClassName="current" exact>
-                    <SidebarLink className="link" text="Credits"/> <ConstructionIcon className ="icon" />
+                    <SidebarLink className="link" text="Credits"/>
                 </NavLink>
             </NavUnlisted>
        </div>

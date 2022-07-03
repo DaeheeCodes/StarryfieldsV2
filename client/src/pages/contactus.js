@@ -110,7 +110,7 @@ function ContactUs () {
     const submitEmail = async (e) => {
         e.preventDefault();
         console.log({mailState});
-        await axios("/send") 
+        await axios.post('/send', {mailState})
             .then(async (res) => {
                 const resData = await res;
                 console.log(resData);

@@ -68,9 +68,9 @@ app.get('*', (req, res) => {
 
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-console.log(process.env.SENDGRID_API_KEY)
+//console.log(process.env.SENDGRID_API_KEY)
    
-   app.post("/send", function (req, res) {
+   app.get("/send", function (req, res) {
     let mailOptions = {
       from: `admin@starryfields.com`,
       to: 'daeheeCodes@gmail.com',
@@ -91,8 +91,6 @@ console.log(process.env.SENDGRID_API_KEY)
         })
       })
     })
-
-
 
 app.listen(process.env.PORT || 3001, () => {
         console.log('Connected to ports' + PORT)

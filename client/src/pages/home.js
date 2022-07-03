@@ -6,7 +6,7 @@ import '../assets.css'
 import iphone  from '../photos/taliphone.png';
 import pixel from '../photos/pixel.jpg';
 import {useRef} from "react";
-
+import sudokube from '../photos/sudokube.png';
 /*regular css expressions do not inherit to mui components,  
 added spearate style component for better readability than inline sx styling
 */
@@ -44,7 +44,7 @@ const titlesone = {
 
 const titlestwo = {
     ml: '-4%',
-    mt: "12%",
+    mt: "25%",
     color: 'gray',
     fontSize: '15px',
     borderBottom: '1px solid',
@@ -202,7 +202,7 @@ function Home () {
         </Grid>
         <Grid item xs={28} sx={{...projects}}>
             <p>
-                Task-a-Lyzer
+                Task-a-Lyzer <span style= {{  fontSize: "25px", marginLeft: "20px"}}> - Full Release 06/2022</span>
             </p>
         </Grid>
         <Grid item xs={12}>
@@ -238,13 +238,13 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p ref={SudoRef}>View Full Documentation</p>
             <p>Download on the Appstore</p>
         </Grid>
-        <Grid item xs={28} sx={{...projects}} >
+        <Grid item xs={28} sx={{...projects}} style={{ marginTop: '15%'}} >
             <p>
-                SudoCube
+                SudoKube <span style= {{  fontSize: "25px", marginLeft: "20px"}}> - In Test</span>
             </p>
         </Grid>
         <Grid item xs={12}>
-        <CardMedia component="img" src = {iphone} style={{ width: 300, height: 600, position: 'absolute', marginTop: '25px'}}/>
+        <CardMedia component="img" src = {sudokube} style={{ width: 300, height: 620, position: 'absolute', marginTop: '12%'}}/>
         </Grid>
         <Grid item xs={0}>
             <p></p>
@@ -254,7 +254,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         </Grid>
         <Grid item xs={25} sx={{...projectdesc}}>
             <p>
-                Exciting new challenge for any puzzle lovers!
+                Just another Sudoku app... but inside a cube!
             </p>
         </Grid>
         <Grid item xs={15}>
@@ -266,7 +266,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         <Grid item xs={25} sx={{...projectdet}}>
             <p>
                 Challenge yourself with the most unique and brain teazing Sudoku yet! 
-                <br></br> A fun collaboration of two classic puzzle. Twist and scroll your way into getting each face of the cube with a unique set of numbers.
+                <br></br> A fun collaboration of two classic puzzle. Twist and turn your way into getting each face of the cube with unique set of numbers.
            </p>
         </Grid>
         <Grid item xs={15}>
@@ -276,13 +276,13 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p ref={PxRef}>View Full Documentation</p>
             <p>Download on the Appstore</p>
         </Grid>
-        <Grid item xs={28} sx={{...projectstwo}}>
+        <Grid item xs={28} sx={{...projectstwo}} style={{ marginTop: '17%'}}>
             <p>
-                PxILoveYou<span style= {{  fontSize: "25px", marginLeft: "20px"}}>  In Dev in Unity</span>
+                PxILoveYou<span style= {{  fontSize: "25px", marginLeft: "20px"}}> - In Dev in Unity</span>
             </p>
         </Grid>
         <Grid item xs={12}>
-        <CardMedia component="img" src = {pixel} style={{ width: 200, height: 400, position: 'absolute', marginTop: "180px", marginLeft: "90px"}}/>
+        <CardMedia component="img" src = {pixel} style={{ width: 200, height: 400, position: 'absolute', marginTop: "17%", marginLeft: "90px"}}/>
         </Grid>
         <Grid item xs={0}>
             <p></p>
@@ -328,11 +328,11 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         </Grid>
         <Grid item xs={28} sx={{...projects}}>
             <p>
-                Wind Walker<span style= {{  fontSize: "25px", marginLeft: "20px"}}>  In Dev in Unity</span>
+                Wind Walker<span style= {{  fontSize: "25px", marginLeft: "20px"}}> - In Dev in Unity</span>
             </p>
         </Grid>
         <Grid item xs={12}>
-        <CardMedia style={{ minWidth:'270px', border: "solid beige", boxShadow: "none", aspectRatio: '16/9', position: "absolute", marginLeft: "-20px", marginTop: "40px" }} component="iframe" image={"https://www.youtube.com/embed/qbc_xPeVLtg"} autoplay control sx={{ height: '30vh', width: '33vw'}} />
+        <CardMedia style={{ minWidth:'270px', border: "solid beige", boxShadow: "none", aspectRatio: '16/9', position: "absolute", marginLeft: "-70px", marginTop: "40px" }} component="iframe" image={"https://www.youtube.com/embed/qbc_xPeVLtg"} autoplay control sx={{ height: '30vh', width: '33vw'}} />
         </Grid>
         <Grid item xs={0}>
             <p></p>
@@ -360,7 +360,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p></p>
         </Grid>
         <Grid item xs={40} sx={{...marketing}}>
-            <p>View Full Documentation</p>
+            <a href="https://github.com/RevDev-Studios/WindWalker" target="_blank" rel="noopener noreferrer" style= {{ color: "inherit", textDecoration: "none"}}>View Full Documentation</a>
         </Grid>
         </Grid>
     </div>
