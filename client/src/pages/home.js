@@ -7,6 +7,9 @@ import iphone  from '../photos/taliphone.png';
 import pixel from '../photos/pixel.jpg';
 import {useRef} from "react";
 import sudokube from '../photos/sudokube.png';
+import taskicon from '../photos/playstore.png';
+import Avatar from '@mui/material/Avatar'
+import sudoicon from '../photos/appstore.png';
 /*regular css expressions do not inherit to mui components,  
 added spearate style component for better readability than inline sx styling
 */
@@ -69,6 +72,7 @@ const projectsref = {
     color: 'black',
     fontSize: '45px',
     cursor: 'pointer',
+    display: 'inline-block',
 }
 
 const projectstwo = {
@@ -142,18 +146,22 @@ function Home () {
                 Personal Projects: Daehee Hwang
             </p>
         </Grid>
-        <Grid item xs={5}>
-            <p></p>
+        <Grid item xs={1} sx={{...projectsref, ...reflink}}>
+        </Grid>
+        <Grid item xs={1} sx={{...projectsref, ...reflink}}>
+            <p><Avatar sx={{ width: '45px', height: '45px', mt: '4px', ml: '-10px'}} variant="square" src={taskicon}></Avatar></p>
         </Grid>
         <Grid item xs={35} sx={{...projectsref, ...reflink}} onClick={TaskScroll}>
-            <p>Task-a-Lyzer<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>Task-a-Lyzer</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>Task-a-Lyzer</span></p>
+        <p>Task-a-Lyzer<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>Task-a-Lyzer</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>Task-a-Lyzer</span></p>
         </Grid>
         <Grid item xs={0} sx={{...projectsref}}>
             <p>
             </p>
         </Grid>
-        <Grid item xs={12}>
-            <p></p>
+        <Grid item xs={11}>
+        </Grid>
+        <Grid item xs={1} sx={{...projectsref, ...reflink}}>
+            <p><Avatar sx={{ width: '45px', height: '45px', mt: '4px', ml: '-10px'}} variant="square" src={sudoicon}></Avatar></p>
         </Grid>
         <Grid item xs={28} sx={{...projectsref, ...reflink}} onClick={SudoScroll}>
             <p>SudoCube<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>SudoCube</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>SudoCube</span></p>
@@ -202,7 +210,7 @@ function Home () {
         </Grid>
         <Grid item xs={28} sx={{...projects}}>
             <p>
-                Task-a-Lyzer <span style= {{  fontSize: "25px", marginLeft: "20px"}}> - Full Release 06/2022</span>
+                Task-a-Lyzer <span style= {{  fontSize: "25px", marginLeft: "20px"}}> - Full Release 07/2022</span>
             </p>
         </Grid>
         <Grid item xs={12}>
@@ -240,7 +248,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         </Grid>
         <Grid item xs={28} sx={{...projects}} style={{ marginTop: '15%'}} >
             <p>
-                SudoKube <span style= {{  fontSize: "25px", marginLeft: "20px"}}> - In Test</span>
+                SudoKube <span style= {{  fontSize: "25px", marginLeft: "20px"}}> - In Beta</span>
             </p>
         </Grid>
         <Grid item xs={12}>

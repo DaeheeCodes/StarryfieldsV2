@@ -107,28 +107,28 @@ function ContactUs () {
 // async function waits for event to run through the function before executing then functions. 
 // data needs to be submitted as json between servers - server 'res(response)' is sent through POST on local server 3001/send and is read at index.js - our node server controller,
 // last then function just resets the state to empty. which is read at 'value' down in our MUI container
-    const submitEmail = async (e) => {
-        e.preventDefault();
-        console.log({mailState});
-        await axios.post('/send', {mailState})
-            .then(async (res) => {
-                const resData = await res;
-                console.log(resData);
-                if (resData.status === "success") {
-                alert("Message Sent");
-                } else if (resData.status === "fail") {
-                alert("Message failed to send");
-                }
-            })
-            .then(() => {
-                setMailState({
-                    name: "",
-                    email: "",
-                    subject: "",
-                    message: "",
-                });
-        });
-    };
+const submitEmail = async (e) => {
+    e.preventDefault();
+    console.log({mailState});
+    await axios.post('/send', {mailState})
+        .then(async (res) => {
+            const resData = await res;
+            console.log(resData);
+            if (resData.status === "success") {
+            alert("Message Sent");
+            } else if (resData.status === "fail") {
+            alert("Message failed to send");
+            }
+        })
+        .then(() => {
+            setMailState({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+            });
+    });
+};
     return (
         <div className="container" >
             <Grid columns={20} container direction={"row"} sx={{...Containerlarge, display: { xs: 'none', sm: 'none', md: 'block' }}} >
