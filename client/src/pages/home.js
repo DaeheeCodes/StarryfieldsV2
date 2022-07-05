@@ -262,7 +262,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         </Grid>
         <Grid item xs={25} sx={{...projectdesc}}>
             <p>
-                Just another Sudoku app... but inside a cube!
+                Just another sudoku app... but inside a cube!
             </p>
         </Grid>
         <Grid item xs={15}>
@@ -273,8 +273,8 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         </Grid>
         <Grid item xs={25} sx={{...projectdet}}>
             <p>
-                Challenge yourself with the most unique and brain teazing Sudoku yet! 
-                <br></br> A fun collaboration of two classic puzzle. Twist and turn your way into getting each face of the cube with unique set of numbers.
+                Challenge yourself with the most unique and brain teazing sudoku yet! 
+                <br></br> A fun collaboration of two classic puzzles. Twist and turn your way into getting each face of the cube to a set of unique numbers.
            </p>
         </Grid>
         <Grid item xs={15}>
@@ -311,7 +311,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
         </Grid>
         <Grid item xs={25} sx={{...projectdet}}>
             <p>
-            PxILoveYou is a Story-Driven mobile game that explores adulthood, nihilism, quarter-life crisis, and finding Love in-midst of all of that.
+            PxILoveYou is a Story-Driven mobile game that explores adulthood, nihilism, quarter-life crisis, but finding Love in-midst of all of that.
             <br></br>You follow a recent college graduate Fred who feels that the world (including himself) is becoming edgier as time passes. After an extremely difficult day at work, he collapses. When he wakes up he finds that everything he sees and feels has become pixelated.
             </p>
         </Grid>
