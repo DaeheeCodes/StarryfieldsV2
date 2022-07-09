@@ -10,6 +10,7 @@ import sudokube from '../photos/sudokube.png';
 import taskicon from '../photos/playstore.png';
 import Avatar from '@mui/material/Avatar'
 import sudoicon from '../photos/appstore.png';
+import pxicon from '../photos/pxicon.png';
 /*regular css expressions do not inherit to mui components,  
 added spearate style component for better readability than inline sx styling
 */
@@ -170,8 +171,11 @@ function Home () {
             <p>
             </p>
         </Grid>
-        <Grid item xs={19}>
+        <Grid item xs={18}>
             <p></p>
+        </Grid>
+        <Grid item xs={1} sx={{...projectsref, ...reflink}}>
+            <p><Avatar sx={{ width: '45px', height: '45px', mt: '4px', ml: '-10px'}} variant="square" src={pxicon}></Avatar></p>
         </Grid>
         <Grid item xs={21} sx={{...projectsref, ...reflink}} onClick={PxScroll}>
             <p>PxILoveYou<span style= {{ marginLeft: "-160px", opacity: "0.2"}}>PxILoveYou</span><span style= {{ marginLeft: "-160px", opacity: "0.1"}}>PxILoveYou</span></p>
@@ -243,8 +247,7 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p></p>
         </Grid>
         <Grid item xs={40} sx={{...marketing}}>
-            <p ref={SudoRef}>View Full Documentation</p>
-            <p>Download on the Appstore</p>
+        <a href="https://apps.apple.com/us/app/task-a-lyzer/id1632954092" target="_blank" rel="noopener noreferrer" style= {{ color: "inherit", textDecoration: "none"}} ref={SudoRef}>Download on the Appstore</a>
         </Grid>
         <Grid item xs={28} sx={{...projects}} style={{ marginTop: '15%'}} >
             <p>
@@ -281,16 +284,15 @@ Task-a-Lyzer attempts to bridge the equipment-gap for iOS based learning for peo
             <p></p>
         </Grid>
         <Grid item xs={40} sx={{...marketing}}>
-            <p ref={PxRef}>View Full Documentation</p>
-            <p>Download on the Appstore</p>
+        <a href="https://apps.apple.com/us/app/sudocube/id1632973156" target="_blank" rel="noopener noreferrer" style= {{ color: "inherit", textDecoration: "none"}} ref={PxRef}>Download on the Appstore</a>
         </Grid>
-        <Grid item xs={28} sx={{...projectstwo}} style={{ marginTop: '17%'}}>
+        <Grid item xs={28} sx={{...projectstwo}} style={{ marginTop: '30%'}}>
             <p>
                 PxILoveYou<span style= {{  fontSize: "25px", marginLeft: "20px"}}> - In Dev in Unity</span>
             </p>
         </Grid>
         <Grid item xs={12}>
-        <CardMedia component="img" src = {pixel} style={{ width: 200, height: 400, position: 'absolute', marginTop: "17%", marginLeft: "90px"}}/>
+        <CardMedia component="img" src = {pixel} style={{ width: 200, height: 400, position: 'absolute', marginTop: "30%", marginLeft: "90px"}}/>
         </Grid>
         <Grid item xs={0}>
             <p></p>

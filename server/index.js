@@ -1,3 +1,4 @@
+
 const express = require("express");
 const path = require('path');
 const sendGridMail = require('@sendgrid/mail');
@@ -8,8 +9,7 @@ const app = express();
 require('dotenv').config()
 let mongoose = require('mongoose');
 let bodyParser = require('body-parser');
-
-
+const mg = require('mailgun-js');
 const blogRoute = require('./mongoroutes/record.js')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -62,14 +62,42 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
+//mailgun
 
 
+const mailgun = () =>
+  mg({
+    apiKey: process.env.MAILGUN_API_KEY,
+    domain: process.env.MAILGUN_DOMIAN,
+  });
+ console.log(mg);
+ app.post('/send', (req, res) => {
+  mailgun()
+    .messages()
+    .send(
+      {
+        from: `admin@starryfields.com`,
+        to: 'daeheeCodes@gmail.com',
+        subject: `Message from: ${req.body.mailState.email}`,
+        html: `${req.body.mailState.message}`,
+      },
+      (error, body) => {
+        if (error) {
+          console.log(error);
+          res.status(500).send({ message: 'Error in sending email' });
+        } else {
+          console.log(body);
+          res.send({ message: 'Email sent successfully' });
+        }
+      }
+    );
+});
 //nodemailer with sendgrid
 
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 //console.log(process.env.SENDGRID_API_KEY)
-   
+   /*
    app.get("/send", function (req, res) {
     let mailOptions = {
       from: `admin@starryfields.com`,
@@ -91,7 +119,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         })
       })
     })
-
+*/
 app.listen(process.env.PORT || 3001, () => {
         console.log('Connected to ports' + PORT)
     })
