@@ -68,9 +68,9 @@ app.get('*', (req, res) => {
 const mailgun = () =>
   mg({
     apiKey: process.env.MAILGUN_API_KEY,
-    domain: process.env.MAILGUN_DOMIAN,
+    domain: process.env.MAILGUN_DOMAIN,
   });
- console.log(mg);
+ //console.log(mg);
  app.post('/send', (req, res) => {
   mailgun()
     .messages()
